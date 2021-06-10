@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AutosuggestComponent } from './autosuggest/autosuggest.component';
+import { CssGridComponent } from './css-grid/css-grid.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ManageCookiesComponent } from './manage-cookies/manage-cookies.component';
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'ToggleSidebar',
     component: ToggleSidebarComponent,
+  },
+  {
+    path: 'CssGrid',
+    component: CssGridComponent,
   },
 ];
 

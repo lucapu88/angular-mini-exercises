@@ -18,7 +18,13 @@
     background-color: red;
     .toggleBtn {
       position: absolute;
-      left: 45%;
+      left: 0%;
+      z-index: 1000;
+      background-color: blue;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 25px;
     }
   }
 }
