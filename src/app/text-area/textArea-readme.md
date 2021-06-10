@@ -1,4 +1,4 @@
-Twitter come area di testo con conteggio dei caratteri
+## Twitter come area di testo con conteggio dei caratteri
 
 Se hai mai usato Twitter, devi sapere che il tuo tweet avrà un limite di caratteri di 280 caratteri e una volta superato quel limite di caratteri, Twitter inizierà a contrassegnare i tuoi personaggi con uno sfondo rosso e vedrai un conteggio dei caratteri con un valore negativo! Ecco, questo è il compito. Puoi costruire la stessa area di testo con un limite di numero di caratteri personalizzato.
 

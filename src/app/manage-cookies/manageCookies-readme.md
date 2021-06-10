@@ -1,4 +1,5 @@
-Gestisci i cookie pop-up
+## Gestisci i cookie pop-up
+
 Hai mai aperto un sito web e hai visto un fastidioso pop-up che chiedeva di accettare i cookie o gestire le tue preferenze? Dobbiamo costruirlo! Un componente pop-up personalizzato per la creazione e la gestione dei cookie in un'applicazione.
 
 Caratteristiche da includere in esso -

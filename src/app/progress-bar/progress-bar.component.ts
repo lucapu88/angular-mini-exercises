@@ -31,4 +31,8 @@ export class ProgressBarComponent implements OnInit {
       this.color = 'green';
     }
   }
+
+  backToTop(): void {
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+  }
 }

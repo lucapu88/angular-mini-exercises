@@ -1,4 +1,4 @@
-Un componente con funzione di selezione/multi selezione, simile a React Select
+## Un componente con funzione di selezione/multi selezione, simile a React Select
 
 I menu a discesa fanno parte della maggior parte delle applicazioni e sono intelligenti per implementare i componenti. React Select è una di quelle librerie di cui mi fido molto per qualsiasi tipo di menu a discesa di cui ho bisogno. Ma mentre impariamo se possiamo creare un semplice componente a discesa, avrà così tanti vantaggi rispetto alla libreria.
 
