@@ -1,0 +1,33 @@
+<div class="cookies-container" *ngIf="!close">
+  <div class="cookies-popup" *ngIf="popup">
+    <div class="close-icon" (click)="close = true">X</div>
+    <h2>Gestione cookies</h2>
+    <div class="options">
+      <input
+        type="checkbox"
+        name="accept"
+        (change)="acceptCookiesOrNot($event)"
+        [(ngModel)]="accept"
+      />
+      <label>Accetta tutti i cookies</label>
+    </div>
+    <div class="options">
+      <input
+        type="checkbox"
+        name="notAccept"
+        [(ngModel)]="notAccept"
+        (change)="acceptCookiesOrNot($event)"
+      />
+      <label>Non accettare nessun cookies</label>
+    </div>
+    <button (click)="confirm()">Conferma</button>
+  </div>
+  <div class="cookies-choise" *ngIf="!popup">
+    <strong *ngIf="accept">Hai accettato tutti i cookies</strong>
+    <strong *ngIf="notAccept">Non hai accettato i cookies</strong>
+  </div>
+</div>
+<div class="cookies-choise" *ngIf="!popup">
+  <h2><strong *ngIf="accept">Hai accettato tutti i cookies</strong></h2>
+  <h2><strong *ngIf="notAccept">Non hai accettato i cookies</strong></h2>
+</div>

@@ -1,0 +1,14 @@
+<div class="text-area-container">
+  <textarea
+    class="text-area"
+    [class.negativeText]="disabled"
+    rows="5"
+    cols="50"
+    #testo
+    (keyup)="textCheck(testo)"
+    placeholder="Scrivi qualcosa..."
+  ></textarea>
+  <small>max text: {{ maxText - testo.value.length }}</small>
+  <button [disabled]="disabled" (click)="submit(testo)">Sent</button>
+  <div [innerHTML]="htmlTag"></div>
+</div>
