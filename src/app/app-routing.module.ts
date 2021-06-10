@@ -8,6 +8,7 @@ import { MultiStepFormComponent } from './multi-step-form/multi-step-form.compon
 import { PasswordFormComponent } from './password-form/password-form.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { TextAreaComponent } from './text-area/text-area.component';
+import { ToggleSidebarComponent } from './toggle-sidebar/toggle-sidebar.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'MultiStepForm',
     component: MultiStepFormComponent,
+  },
+  {
+    path: 'ToggleSidebar',
+    component: ToggleSidebarComponent,
   },
 ];
 

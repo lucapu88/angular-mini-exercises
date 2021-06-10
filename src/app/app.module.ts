@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { PasswordFormComponent } from './password-form/password-form.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MultiStepFormComponent } from './multi-step-form/multi-step-form.component';
+import { ToggleSidebarComponent } from './toggle-sidebar/toggle-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { MultiStepFormComponent } from './multi-step-form/multi-step-form.compon
     PasswordFormComponent,
     HomepageComponent,
     MultiStepFormComponent,
+    ToggleSidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { MultiStepFormComponent } from './multi-step-form/multi-step-form.compon
     FormsModule,
     ReactiveFormsModule,
     GooglePlaceModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
