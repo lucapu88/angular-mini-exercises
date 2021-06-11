@@ -20,7 +20,7 @@
       />
       <label>Non accettare nessun cookies</label>
     </div>
-    <button (click)="confirm()">Conferma</button>
+    <button [disabled]="!disabledBtn" (click)="confirm()">Conferma</button>
   </div>
   <div class="cookies-choise" *ngIf="!popup">
     <strong *ngIf="accept">Hai accettato tutti i cookies</strong>

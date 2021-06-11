@@ -2,9 +2,10 @@
 
 .container {
   display: flex;
+  margin-top: -20px; //solamente per non sbattermi, lo so che non si fa!
   .left {
     width: 20%;
-    height: 100vh;
+    height: 93vh;
     background-color: yellow;
     position: absolute;
     z-index: 10;
@@ -13,7 +14,7 @@
   }
   .right {
     width: 100%;
-    height: 100vh;
+    height: 93vh;
     position: relative;
     background-color: red;
     .toggleBtn {
