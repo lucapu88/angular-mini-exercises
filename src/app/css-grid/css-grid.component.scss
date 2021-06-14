@@ -1,0 +1,101 @@
+.grid-container {
+  display: grid;
+  grid-template-rows: 200px 200px 200px; // 3 righe alte 200px
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; // 5 colonne di larghezza libera, ovvero occupano tutto lo spazio disponibile per riempire il display
+  gap: 5px;
+  grid-template-areas:
+    'area1 area1 area1 area1 area1'
+    'area2 area2 . area3 area3'
+    'area2 area2 area4 area4 area4'; //disegni esattamente ciò che vedi, ovvero il quadrato blu è tutta l'area1, il quadrato rosso è tutta l'area2, il punto è lo spazio vuoto centrale, l'area3 è il quadrato verde della riga centrale a destra, e l'area4 è il quadrato giallo nell'angolo basso destro
+  margin: 20px;
+
+  .grid-item1 {
+    background: blue;
+    text-align: center;
+    border: black 5px solid;
+    grid-area: area1;
+  }
+
+  .grid-item2 {
+    background: red;
+    text-align: center;
+    border: black 5px solid;
+    grid-area: area2;
+  }
+
+  .grid-item3 {
+    background: green;
+    text-align: center;
+    border: black 5px solid;
+    grid-area: area3;
+  }
+  .grid-item4 {
+    background: yellow;
+    text-align: center;
+    border: black 5px solid;
+    grid-area: area4;
+  }
+}
+
+.grid-container2 {
+  display: grid;
+  grid-template-rows: 200px 200px 200px;
+  grid-template-columns: 200px 200px 200px;
+  gap: 5px;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-evenly; //distribuzione omogenea dello spazio attorno alle celle incluso il contorno
+  align-content: center;
+  background-color: antiquewhite;
+  margin: 20px;
+  /* esiste una versione breve: place-content: <align-content> / <justify-content>.
+  place-content: center / space-evenly;*/
+
+  .grid-item1,
+  .grid-item3,
+  .grid-item4,
+  .grid-item5,
+  .grid-item6 {
+    background: grey;
+    text-align: center;
+    border: black 5px solid;
+    width: 150px;
+    height: 150px;
+  }
+
+  .grid-item2 {
+    background: blue;
+    text-align: center;
+    border: black 5px solid;
+    width: 150px;
+    height: 150px;
+    justify-self: start; //regola l’allineamento orizzontale
+    align-self: start; //regola l’allineamento verticale
+
+    /* Le indicazioni possono anche essere abbreviate utilizzando "place-items" o "place-self". Entrambe le informazioni (verticale e orizzontale) possono essere inserite in una sola cella: place-items: <align-items> / justify-items>.
+    place-items: center / end;*/
+  }
+}
+
+.grid-container3 {
+  display: grid;
+  //width: 800px;
+  //height: 800px;
+  grid-template-rows: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /*Con repeat() aggiunge il maggior numero possibile di celle senza rompere il confine del container. 
+  Tuttavia può accadere che lo spazio rimanga inutilizzato. L’opzione "auto-fit", invece, regola le singole celle in modo tale che lo spazio venga utilizzato fino al bordo.
+  Con la dicitura "minmax()" si può fare in modo che un item non diventi troppo piccolo o troppo grande. Inserite prima il valore più piccolo tra parentesi e poi il più grande.*/
+  grid-gap: 5px;
+  margin: 20px;
+
+  .grid-item1,
+  .grid-item2,
+  .grid-item3,
+  .grid-item4,
+  .grid-item5,
+  .grid-item6 {
+    border: 2px solid red;
+    background-color: cadetblue;
+  }
+}
