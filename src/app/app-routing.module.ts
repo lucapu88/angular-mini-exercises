@@ -11,7 +11,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { ToggleSidebarComponent } from './toggle-sidebar/toggle-sidebar.component';
 
-const routes: Routes = [
+export const routes: Routes = [
+  { path: '', redirectTo: 'homepage', pathMatch: 'full' },
   {
     path: 'homepage',
     component: HomepageComponent,

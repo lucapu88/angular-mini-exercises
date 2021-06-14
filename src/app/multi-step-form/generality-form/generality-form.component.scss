@@ -1,0 +1,8 @@
+.generality {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  & > input {
+    margin-bottom: 20px;
+  }
+}

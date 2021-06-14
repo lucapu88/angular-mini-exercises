@@ -16,6 +16,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { MultiStepFormComponent } from './multi-step-form/multi-step-form.component';
 import { ToggleSidebarComponent } from './toggle-sidebar/toggle-sidebar.component';
 import { CssGridComponent } from './css-grid/css-grid.component';
+import { GeneralityFormComponent } from './multi-step-form/generality-form/generality-form.component';
+import { DetailsFormComponent } from './multi-step-form/details-form/details-form.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { CssGridComponent } from './css-grid/css-grid.component';
     MultiStepFormComponent,
     ToggleSidebarComponent,
     CssGridComponent,
+    GeneralityFormComponent,
+    DetailsFormComponent,
   ],
   imports: [
     BrowserModule,

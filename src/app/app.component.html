@@ -1,32 +1,13 @@
 <nav class="menu" [class.prova]="!progressBar">
-  <a routerLink="homepage" class="menu-item" routerLinkActive="active">Home</a>
-  <a routerLink="textArea" class="menu-item" routerLinkActive="active"
-    >text-area</a
-  >
-  <a routerLink="dropdown" class="menu-item" routerLinkActive="active"
-    >dropdown</a
-  >
-  <a routerLink="autosuggest" class="menu-item" routerLinkActive="active"
-    >autosuggest</a
-  >
-  <a routerLink="manageCookies" class="menu-item" routerLinkActive="active"
-    >manage-cookies</a
-  >
-  <a routerLink="progressBar" class="menu-item" routerLinkActive="active"
-    >progress-bar</a
-  >
-  <a routerLink="PasswordForm" class="menu-item" routerLinkActive="active"
-    >password-form</a
-  >
-  <a routerLink="MultiStepForm" class="menu-item" routerLinkActive="active"
-    >multi-step-form</a
-  >
-  <a routerLink="ToggleSidebar" class="menu-item" routerLinkActive="active"
-    >toggle-sidebar</a
-  >
-  <a routerLink="CssGrid" class="menu-item" routerLinkActive="active"
-    >grid (Bonus)</a
-  >
+  <ng-container *ngFor="let route of routes">
+    <a
+      *ngIf="route.path != ''"
+      routerLink="{{ route.path }}"
+      class="menu-item"
+      routerLinkActive="active"
+      >{{ route.path }}</a
+    >
+  </ng-container>
 </nav>
 
 <router-outlet></router-outlet>

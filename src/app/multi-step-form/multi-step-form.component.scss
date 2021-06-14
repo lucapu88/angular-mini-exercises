@@ -1,0 +1,45 @@
+.multi-step-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  .multi-step-form {
+    width: 800px;
+    height: 450px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 10px 0px #000000;
+    box-shadow: 0px 0px 20px 0px #000000;
+    position: relative;
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      & > input {
+        margin-bottom: 20px;
+      }
+      text-align: center;
+      .label-gender {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.btn {
+  margin: 10%;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.active {
+  color: red;
+  font-weight: bold;
+}

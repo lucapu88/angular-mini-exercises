@@ -1,0 +1,15 @@
+<form [formGroup]="generalityForm" (ngSubmit)="onSubmit()">
+  <div class="generality">
+    <input type="text" name="nome" formControlName="nome" placeholder="nome" />
+    <input
+      type="text"
+      name="cognome"
+      formControlName="cognome"
+      placeholder="cognome"
+    />
+    <input type="number" name="eta" formControlName="eta" placeholder="età" />
+    <button type="submit" class="btn" [disabled]="generalityForm.invalid">
+      next
+    </button>
+  </div>
+</form>

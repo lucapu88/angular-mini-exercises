@@ -1,1 +1,25 @@
-<p>multi-step-form works!</p>
+<div class="multi-step-form-container">
+  <div class="multi-step-form">
+    <div>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+    </div>
+    <app-generality-form
+      *ngIf="formGeneralityInfo.visibile"
+      (generality)="outputGeneralityInfo($event)"
+    ></app-generality-form>
+
+    <app-details-form
+      *ngIf="!formGeneralityInfo.visibile"
+      (details)="outputDetailsInfo($event)"
+    ></app-details-form>
+
+    <!-- <form [formGroup]="acceptForm" (ngSubmit)="onSubmit()">
+      <div class="accept">
+        <h2>Riepilogo</h2>
+      </div>
+      <button type="submit" class="btn">confirm</button>
+    </form> -->
+  </div>
+</div>
