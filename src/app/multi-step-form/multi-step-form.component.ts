@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-multi-step-form',
@@ -20,16 +19,12 @@ export class MultiStepFormComponent implements OnInit {
     visibile: true,
   };
 
-  acceptForm: FormGroup = this.fb.group({
-    // gender: [false, Validators.required],
-    // email: ['', Validators.required],
-  });
-
-  constructor(private fb: FormBuilder) {}
+  constructor() {}
 
   ngOnInit(): void {}
 
   outputGeneralityInfo(generality: any): void {
+    //qui ricevo tutta la roba dal componente figlio (generality-form) e la salvo in una variabile
     this.formGeneralityInfo = generality;
     console.log(this.formGeneralityInfo);
   }
@@ -39,7 +34,15 @@ export class MultiStepFormComponent implements OnInit {
     console.log(this.formDetailsInfo);
   }
 
-  onSubmit(): void {
+  confirm(): void {
+    const request = {
+      nome: this.formGeneralityInfo.nome,
+      cognome: this.formGeneralityInfo.cognome,
+      età: this.formGeneralityInfo.eta,
+      sesso: this.formDetailsInfo.gender,
+      email: this.formDetailsInfo.email,
+    };
+    //qui poi si potrebbe fare una chiamata al backend per inviare dati con la nostra constante request
     this.accept = true;
   }
 }

@@ -7,22 +7,24 @@
       >
       <span class="number" [class.active]="!formDetailsInfo.visibile">3</span>
     </div>
+    <!-- il primo form è visibile perchè la proprietà visibile dell'oggetto formGeneralityInfo è settata a true -->
+    <!-- quando nel form si fa il submit, quella proprietà diventa false per renderlo invisibile -->
+    <!-- nel metodo outputGeneralityInfo ci sarà la costante formInfo creata all'interno del componente generality-form -->
     <app-generality-form
       *ngIf="formGeneralityInfo.visibile"
       (generality)="outputGeneralityInfo($event)"
     ></app-generality-form>
-
+    <!-- stessa cosa di sopra, soltanto che il form sarà visibile se la proprietà visibile dell'oggetto formGeneralityInfo diventa false e se la proprietà visibile dell'oggetto formDetailsInfo è true-->
     <app-details-form
       *ngIf="!formGeneralityInfo.visibile && formDetailsInfo.visibile"
       (details)="outputDetailsInfo($event)"
     ></app-details-form>
 
-    <form
+    <!-- il form sottostante è visibile se gli altri 2 form hanno proprietà visibile === false e se la proprietà accept è false -->
+    <div
       *ngIf="
         !formGeneralityInfo.visibile && !formDetailsInfo.visibile && !accept
       "
-      [formGroup]="acceptForm"
-      (ngSubmit)="onSubmit()"
     >
       <div class="accept">
         <h2>Riepilogo</h2>
@@ -32,8 +34,9 @@
         <p>sesso: {{ formDetailsInfo.gender }}</p>
         <p>email: {{ formDetailsInfo.email }}</p>
       </div>
-      <button type="submit" class="btn">confirm</button>
-    </form>
+      <button type="submit" class="btn" (click)="confirm()">confirm</button>
+    </div>
+    <!-- quando clicco sul confirm la proprietà accept diventa true e quindi mostrerò solo un messaggio di conferma -->
     <h1 *ngIf="accept">dati inviati</h1>
   </div>
 </div>

@@ -21,6 +21,8 @@ export class DetailsFormComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(): void {
+    // creo una costante con tutti i dati del forme e tramite il metodo emit la invio al padre di questo componente
+    // nella costante mi passo la proprietà visibile settata a false in modo da rendere il form invisibile
     const formInfo = {
       gender: this.detailsForm.value.gender,
       email: this.detailsForm.value.email,
