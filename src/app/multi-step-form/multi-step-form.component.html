@@ -1,9 +1,11 @@
 <div class="multi-step-form-container">
   <div class="multi-step-form">
-    <div>
-      <span>1</span>
-      <span>2</span>
-      <span>3</span>
+    <div class="step-numbers" *ngIf="!accept">
+      <span class="number active">1</span>
+      <span class="number" [class.active]="!formGeneralityInfo.visibile"
+        >2</span
+      >
+      <span class="number" [class.active]="!formDetailsInfo.visibile">3</span>
     </div>
     <app-generality-form
       *ngIf="formGeneralityInfo.visibile"
@@ -11,15 +13,27 @@
     ></app-generality-form>
 
     <app-details-form
-      *ngIf="!formGeneralityInfo.visibile"
+      *ngIf="!formGeneralityInfo.visibile && formDetailsInfo.visibile"
       (details)="outputDetailsInfo($event)"
     ></app-details-form>
 
-    <!-- <form [formGroup]="acceptForm" (ngSubmit)="onSubmit()">
+    <form
+      *ngIf="
+        !formGeneralityInfo.visibile && !formDetailsInfo.visibile && !accept
+      "
+      [formGroup]="acceptForm"
+      (ngSubmit)="onSubmit()"
+    >
       <div class="accept">
         <h2>Riepilogo</h2>
+        <p>nome: {{ formGeneralityInfo.nome }}</p>
+        <p>cognome: {{ formGeneralityInfo.cognome }}</p>
+        <p>età: {{ formGeneralityInfo.eta }}</p>
+        <p>sesso: {{ formDetailsInfo.gender }}</p>
+        <p>email: {{ formDetailsInfo.email }}</p>
       </div>
       <button type="submit" class="btn">confirm</button>
-    </form> -->
+    </form>
+    <h1 *ngIf="accept">dati inviati</h1>
   </div>
 </div>

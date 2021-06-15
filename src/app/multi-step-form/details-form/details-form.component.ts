@@ -18,7 +18,9 @@ export class DetailsFormComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  onSubmit(): void {
     const formInfo = {
       gender: this.detailsForm.value.gender,
       email: this.detailsForm.value.email,

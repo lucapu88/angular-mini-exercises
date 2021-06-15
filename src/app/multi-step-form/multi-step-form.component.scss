@@ -17,6 +17,23 @@
     box-shadow: 0px 0px 20px 0px #000000;
     position: relative;
 
+    .step-numbers {
+      margin: 10px;
+      .number {
+        margin: 10px;
+        border: 1px solid;
+        border-radius: 50%;
+        padding: 5px 10px;
+        background-color: black;
+        color: white;
+      }
+      .active {
+        @extend .number;
+        background-color: red;
+        font-weight: bold;
+      }
+    }
+
     .details {
       display: flex;
       flex-direction: column;
@@ -37,9 +54,4 @@
   position: absolute;
   right: 5px;
   bottom: 5px;
-}
-
-.active {
-  color: red;
-  font-weight: bold;
 }

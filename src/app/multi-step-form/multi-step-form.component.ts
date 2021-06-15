@@ -15,7 +15,7 @@ export class MultiStepFormComponent implements OnInit {
     visibile: true,
   };
   formDetailsInfo = {
-    sesso: '',
+    gender: '',
     email: '',
     visibile: true,
   };
@@ -31,6 +31,7 @@ export class MultiStepFormComponent implements OnInit {
 
   outputGeneralityInfo(generality: any): void {
     this.formGeneralityInfo = generality;
+    console.log(this.formGeneralityInfo);
   }
 
   outputDetailsInfo(details: any): void {
