@@ -1,0 +1,8 @@
+@import '../../../styles.scss';
+
+.label-gender {
+  margin-right: 20px;
+  & > input {
+    margin-right: 5px;
+  }
+}

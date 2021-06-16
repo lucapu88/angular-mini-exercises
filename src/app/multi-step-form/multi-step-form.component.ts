@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneralityC, DetailsC } from '../forms';
 
 @Component({
   selector: 'app-multi-step-form',
@@ -7,17 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultiStepFormComponent implements OnInit {
   accept: boolean = false;
-  formGeneralityInfo = {
-    nome: '',
-    cognome: '',
-    eta: '',
-    visibile: true,
-  };
-  formDetailsInfo = {
-    gender: '',
-    email: '',
-    visibile: true,
-  };
+  formGeneralityInfo = new GeneralityC();
+  formDetailsInfo = new DetailsC();
 
   constructor() {}
 
@@ -26,12 +18,10 @@ export class MultiStepFormComponent implements OnInit {
   outputGeneralityInfo(generality: any): void {
     //qui ricevo tutta la roba dal componente figlio (generality-form) e la salvo in una variabile
     this.formGeneralityInfo = generality;
-    console.log(this.formGeneralityInfo);
   }
 
   outputDetailsInfo(details: any): void {
     this.formDetailsInfo = details;
-    console.log(this.formDetailsInfo);
   }
 
   confirm(): void {
@@ -41,8 +31,8 @@ export class MultiStepFormComponent implements OnInit {
       età: this.formGeneralityInfo.eta,
       sesso: this.formDetailsInfo.gender,
       email: this.formDetailsInfo.email,
-    };
-    //qui poi si potrebbe fare una chiamata al backend per inviare dati con la nostra constante request
+    }; //qui poi si potrebbe fare una chiamata al backend per inviare dati con la nostra constante request
+
     this.accept = true;
   }
 }

@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 .multi-step-form-container {
   display: flex;
   justify-content: center;
@@ -19,7 +21,7 @@
     position: relative;
 
     .step-numbers {
-      margin: 10px;
+      margin-bottom: 10%;
       .number {
         margin: 10px;
         border: 1px solid;
