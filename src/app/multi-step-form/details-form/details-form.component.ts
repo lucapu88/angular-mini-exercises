@@ -14,7 +14,7 @@ export class DetailsFormComponent implements OnInit {
 
   detailsForm: FormGroup = this.fb.group({
     gender: [null, Validators.required],
-    email: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
   });
 
   constructor(private fb: FormBuilder) {}

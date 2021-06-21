@@ -9,3 +9,5 @@ Caratteristiche da includere in esso -
 Crea un modulo con 3 pagine diverse.
 Aggiungi un elemento di transizione in alto, che possiamo usare per navigare tra tre moduli.
 L'ultimo modulo dovrebbe inviare i dati.
+
+APPUNTO PERSONALE: ho creato il tutto senza entrare nel dettaglio, per il momento ho fatto si che funzionasse, ma è evidente che devo mogliorare parecchie cose...Appena avrò un pò di tempo.
